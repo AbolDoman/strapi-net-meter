@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "informations",
+  "info": {
+    "singularName": "information",
+    "pluralName": "informations",
+    "displayName": "information",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "userId": {
+      "type": "text",
+      "required": true
+    },
+    "age": {
+      "type": "string",
+      "required": true
+    },
+    "familyMembers": {
+      "required": true,
+      "type": "integer"
+    },
+    "province": {
+      "type": "string",
+      "required": true
+    },
+    "education": {
+      "type": "string"
+    },
+    "operatorType": {
+      "type": "string"
+    },
+    "personalNetUsageValue": {
+      "type": "integer"
+    },
+    "netUsageValue": {
+      "type": "integer"
+    },
+    "personalUsagePrice": {
+      "type": "integer"
+    },
+    "usagePrice": {
+      "type": "integer"
+    },
+    "userEmail": {
+      "type": "string"
+    },
+    "lastComent": {
+      "type": "string"
+    },
+    "operators_lists": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::operators-list.operators-list",
+      "inversedBy": "information"
+    }
+  }
+}
